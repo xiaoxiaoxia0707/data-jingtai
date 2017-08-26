@@ -47,6 +47,12 @@
 .dadaLogin-content .weui-btn_plain-default:not(.weui-btn_plain-disabled):active {
   color: #ffffff;
 }
+.dadaLogin-content #fork-img {
+  display: none;
+}
+.dadaLogin-content #eye-img {
+  display: none;
+}
 .offline-content {
   background: #efeff4;
 }

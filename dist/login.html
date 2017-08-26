@@ -22,14 +22,14 @@
                 <div class="weui-cell">
                     <div class="weui-cell__hd"><label class="weui-label"><img src="images/phone.png" alt="手机" width="16"></label></div>
                     <div class="weui-cell__bd" class="phone-weui-cell__bd">
-                        <input class="weui-input" type="number"  placeholder="请输入手机号"/>
+                        <input class="weui-input" type="number"  placeholder="请输入手机号" id="numberInput"/>
                     </div>
                     <img src="images/fork.png" alt="打叉" width="16"  id="fork-img">
                  </div>
                  <div class="weui-cell">
                     <div class="weui-cell__hd"><label class="weui-label"><img src="images/key.png" alt="密码" width="20"></label></div>
                     <div class="weui-cell__bd" class="key-weui-cell__bd">
-                        <input class="weui-input" type="text"  placeholder="请输入密码"/>
+                        <input class="weui-input" type="password" placeholder="请输入密码" id="passwordInput"/>
                     </div>
                     <img src="images/eye.png" alt="眼睛" width="18"  id="eye-img">
                  </div>
@@ -41,8 +41,41 @@
     </div>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript">
+     $(function(){
+        var $numberInput = $('#numberInput'),//输入手机号input
+            $inputCancel = $('#fork-img');//打叉的图片
+            $passwordInput=$("#passwordInput");//输入密码input
+            $inputShow=$("#eye-img");//眼睛的图片
+        //对手机input做点击显示打叉
+        $numberInput.on('click',function(){
+           $inputCancel.show();
+        });
+        //点击打叉图片，清除手机input里面值
+        $inputCancel.on('click',function(){
+            $numberInput.val('');
+        });
+        //点击密码input框显示按钮
+        $passwordInput.on('click',function(){
+             $inputShow.show();
+        })
+        //点击眼睛图片，显示密码
+        var status = 0;
+        $inputShow.on('click',function(){
+            if(status == 0){
+                status = 1;
+               $passwordInput.attr("type", "text");  
+            }else {
+                status = 0;
+               $passwordInput.attr("type","password");
+
+            }
+        })
+
+
+        //手机号码的正则表达式
+
     
-  
+    });
 </script>
 </body>
 </html>
