@@ -2,30 +2,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <title>登录</title>
+    <title></title>
     <link rel="stylesheet" href="css/weui.css">
     <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/master.css">
   <!--   <link rel="stylesheet" href="css/example.css"> -->
 </head>
 <body ontouchstart>
-   <div class="page">
-        <div class="page__hd header">
-            <h1 class="title">登录</h1>
-        </div>
-        <div class="content">
-            <a href="#">
-                <img>
-            </a>
-            <a href="#">
-                <img>
-            </a>
-            <a href="#">
-                <img>
-            </a>
-        </div>
+    <div class="page">
+        <div class="dadaLogin-content content">
+            <div class="logo">
+                <div class="logo-main">
+                    <img src="images/logo.png" alt="头像" width="75">
+                    <img src="images/title.png" alt="标题" width="145">
+                </div>
+            </div>
+            <!-- 输入手机号与密码-->
+           <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label"><img src="images/phone.png" alt="手机" width="16"></label></div>
+                    <div class="weui-cell__bd" class="phone-weui-cell__bd">
+                        <input class="weui-input" type="number"  placeholder="请输入手机号"/>
+                    </div>
+                    <img src="images/fork.png" alt="打叉" width="16"  id="fork-img">
+                 </div>
+                 <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label"><img src="images/key.png" alt="密码" width="20"></label></div>
+                    <div class="weui-cell__bd" class="key-weui-cell__bd">
+                        <input class="weui-input" type="text"  placeholder="请输入密码"/>
+                    </div>
+                    <img src="images/eye.png" alt="眼睛" width="18"  id="eye-img">
+                 </div>
+             </div>
+            <div class="button-sp-area">
+                <a href="javascript:;" class="weui-btn weui-btn_plain-default">按钮</a>   
+            </div>
+        </div>   
     </div>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript">
+    
   
 </script>
 </body>

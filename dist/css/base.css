@@ -11,3 +11,17 @@
   letter-spacing: 2px;
   font-family: arial, sans-serif;
 }
+.page .title img {
+  padding-top: 13px;
+}
+.page .title img:first-child {
+  padding-left: 15px;
+  float: left;
+}
+.page .title img:last-child {
+  padding-right: 15px;
+  float: right;
+}
+.page .offline-header {
+  background-image: -webkit-linear-gradient(top left, #ff7e00, #ff5c00);
+}
