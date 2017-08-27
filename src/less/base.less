@@ -1,4 +1,7 @@
 //设置头部的颜色以及文字的位置
+body{
+  background: #f8f8f8;
+}
  .page{
  	& .header{
  		background: #ff8108;
@@ -11,7 +14,8 @@
  		color: #fff;
  		font-size: 16px;
  		letter-spacing: 2px;
- 		font-family: arial, sans-serif
+ 		font-family: arial, sans-serif;
+ 		white-space: nowrap;
  	}
  	& .title img{
  		padding-top: 13px;
@@ -26,5 +30,38 @@
  	}//颜色渐变
  	& .offline-header{
  		background-image: -webkit-linear-gradient(top left, #ff7e00, #ff5c00); 
+ 	}
+ 	& .area-header{
+ 		padding-left: 15px;
+ 		padding-right: 15px;
+ 	}
+ 	& .area-header .pull-left{
+ 		color: #fff;
+ 		position: relative;
+  		z-index: 20;
+  		font-size: 20px;
+  		line-height: 46px;
+		float: left;
+
+ 	}
+ 	& .area-header{
+ 		 position: absolute;
+  			right: 0;
+  left: 0;
+  z-index: 10;
+  height: 46px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+ 	}
+ 	& .area-header .title{
+ 		 position: absolute!important;
+  		display: block!important;
+  		width: 100%!important;
+  		padding: 0!important;
+ 		 margin: 0 -30px!important;
+  
+
  	}
  }
