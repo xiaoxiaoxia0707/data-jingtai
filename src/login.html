@@ -37,6 +37,16 @@
             <div class="button-sp-area">
                 <a href="javascript:;" class="weui-btn weui-btn_plain-default">按钮</a>   
             </div>
+            <div  id="dialog" style="display: none;">
+                <div class="weui-mask"></div>
+                <div class="weui-dialog">
+                    <div class="weui-dialog__bd">手机信息错误</div>
+                    <div class="weui-dialog__ft">
+                        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>   
     </div>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
@@ -58,7 +68,7 @@
         $passwordInput.on('click',function(){
              $inputShow.show();
         })
-        //点击眼睛图片，显示密码
+        //点击眼睛图片，显示密码与隐藏密码
         var status = 0;
         $inputShow.on('click',function(){
             if(status == 0){
@@ -69,11 +79,17 @@
                $passwordInput.attr("type","password");
             }
         })
-
-
-        //手机号码的正则表达式
-
-    
+        $(".weui-btn").click(function(){
+         //手机号码的正则表达式
+        var phone = $numberInput.value;
+        if(!(/^1(3|4|5|7|8)\d{9}$/.test(phone))){ 
+            //提示框显示
+            $("#dialog").css("display","block");
+            $(".weui-dialog__btn").click(function(){
+                $("#dialog").css("display","none");
+            })
+            }     
+        })    
     });
 </script>
 </body>
