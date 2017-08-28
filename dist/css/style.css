@@ -1,0 +1,42 @@
+.join-activity {
+  background: #00b0ec;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  height: 45px;
+  line-height: 45px;
+}
+.sendOffline-content .weui-cells {
+  margin-top: 0;
+}
+.sendOffline-content .weui-label {
+  width: 80px;
+  border-right: 1px solid #dfdfdf;
+  font-size: 16px;
+}
+.sendOffline-content .weui-input {
+  color: #999999;
+  font-size: 14px;
+}
+.sendOffline-content .weui-cell {
+  border-bottom: 1px solid #dfdfdf;
+}
+.sendOffline-content .weui-cell:before {
+  height: 0;
+  border: none;
+}
+.sendOffline-content .weui-cell__bd {
+  margin-left: 12px;
+}
+.sendOffline-content .textarea-header {
+  margin-bottom: 68px;
+}
+.sendOffline-content .button-sp-area {
+  width: 90%;
+  margin: 30px auto;
+}
+.sendOffline-content .weui-btn_plain-default {
+  background: #ff8108;
+  color: #FFFFFF;
+  border: none;
+}

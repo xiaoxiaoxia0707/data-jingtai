@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="css/weui.css">
+    <link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_397517_apq9zsvphrr4quxr.css">
+  <!--   <link rel="stylesheet" href="css/example.css"> -->
+</head>
+<body ontouchstart>
+   <div class="page">
+        <div class="area-header page__hd header">
+            <a  class="pull-left iconfont icon-zuobian"></a>
+            <h1 class="title">
+                    发布活动
+            </h1>
+        </div> 
+        <div class="sendOffline-content content">
+               <!-- 幻灯片Slider -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="http://img.alicdn.com/imgextra/i3/1910146537/TB2WRU_kkqvpuFjSZFhXXaOgXXa_!!1910146537.jpg_760x760Q70s50.jpg_.webp">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="http://img.alicdn.com/imgextra/i2/725677994/TB251FCd1tTMeFjSZFOXXaTiVXa_!!725677994.jpg_760x760Q70s50.jpg_.webp">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!--活动信息内容-->
+                 <div class="weui-cells weui-cells_form">
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd"><label class="weui-label">活动标题</label></div>
+                        <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" value="6.18年中大促销"/>
+                        </div>
+                    </div>
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd"><label class="weui-label">活动预算</label></div>
+                        <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" value="12000:00"/>
+                        </div>
+                    </div>
+                    <div class="weui-cell">
+                        <div class="textarea-header weui-cell__hd"><label class="weui-label">活动要求</label></div>
+                        <div class="weui-cell__bd">
+                             <textarea class="weui-textarea" value="1.20家门店参与，为期7天。2.需要有明显堆头。3.必须完成300万业绩。4.以上所说的全部都要达到，重要事情说三遍" rows="3"></textarea>
+                            <!-- <div class="weui-textarea-counter"><span>0</span>/200</div> -->
+                        </div>
+                    </div>
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd"><label class="weui-label">活动时间</label></div>
+                        <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" value="2017-12-2"/>
+                        </div>
+                    </div>
+                </div>
+         </div> 
+        <a href="#" class="bar bar-tab see-activity">查看活动照片</a>        
+    </div>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/lib/idangerous.swiper.min.js"></script>
+<script type="text/javascript">
+            var mySwiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                autoplay: 2000,
+                loop: true,
+                paginationClickable: true,
+                onImagesReady: function (swiper) {
+                    var obj = $('.swiper-slide').find('img');
+                    var max;
+                    var heightList = new Array;
+                    for (var i = 0; i < obj.length; i++) {
+                        heightList[i] = $(obj[i]).height()
+                    }
+                    max = Math.max.apply(null, heightList);
+                    $('.swiper-slide').height(max);
+                    $('.swiper-wrapper').height(max);
+                }
+            });
+</script>
+</body>
+</html>

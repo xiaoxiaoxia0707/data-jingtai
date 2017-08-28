@@ -1,6 +1,9 @@
 body {
   background: #f8f8f8;
 }
+.content {
+  padding-top: 46px;
+}
 .page .header {
   background: #ff8108;
   height: 46px;
@@ -26,7 +29,8 @@ body {
   padding-right: 15px;
   float: right;
 }
-.page .offline-header {
+.page .offline-header,
+.page .area-header {
   background-image: -webkit-linear-gradient(top left, #ff7e00, #ff5c00);
 }
 .page .area-header {
@@ -40,6 +44,15 @@ body {
   font-size: 20px;
   line-height: 46px;
   float: left;
+}
+.page .area-header .pull-right {
+  color: #fff;
+  position: relative;
+  z-index: 20;
+  font-size: 16px;
+  line-height: 46px;
+  padding-right: 30px;
+  float: right;
 }
 .page .area-header {
   position: absolute;
@@ -58,4 +71,78 @@ body {
   width: 100%!important;
   padding: 0!important;
   margin: 0 -30px !important;
+}
+.swiper-wrapper {
+  height: auto;
+}
+.swiper-slide img {
+  width: 100%;
+}
+.swiper-slide .title {
+  font-style: italic;
+  font-size: 42px;
+  margin-top: 80px;
+  margin-bottom: 0;
+  line-height: 45px;
+}
+.swiper-pagination {
+  position: absolute;
+  z-index: 20;
+  margin: 0 auto;
+  left: 50%;
+  bottom: 10px;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #222;
+  margin-right: 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-visible-switch {
+  background: #aaa;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+.swiper-pagination {
+  left: 50%!important;
+  transform: translateX(-50%) !important;
+  -webkit-transform: translateX(-50%) !important;
+}
+.swiper-slide img {
+  height: auto!important;
+  max-height: 200px!important;
+}
+/*max-height: 225px!important;*/
+.shopping-content .swiper-container {
+  margin: 0;
+}
+.bar-tab {
+  bottom: 0;
+  width: 100%;
+  height: 46px;
+  padding: 0;
+  table-layout: fixed;
+}
+.see-activity {
+  background-image: -webkit-linear-gradient(top left, #ff7e00, #ff5c00);
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  height: 45px;
+  line-height: 45px;
+}
+.bar {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  height: 44px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
