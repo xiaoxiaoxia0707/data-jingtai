@@ -6,16 +6,30 @@
     <link rel="stylesheet" href="css/weui.css">
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
-  <!--   <link rel="stylesheet" href="css/example.css"> -->
 </head>
 <body ontouchstart>
    <div class="page">
-        <div class="offline-header page__hd header">
+         <!-- 品牌商活动列表 -->
+        <div class="offline-header page__hd header" id="brand-header">
             <h1 class="title">
-                <img src="images/user.png" alt="用户按钮" width="20">
+                <img src="images/user.png" alt="用户按钮" width="20" class="uerBtn">
                     相宜本草
                 <img src="images/jia.png" alt="jia" width="20">
             </h1>
+        </div>
+        <!-- KA经理活动列表 -->
+        <div class="area-header page__hd header" id="KA-header">
+            <img src="images/user.png" alt="用户按钮" width="20" class="pull-left uerBtn">
+            <h1 class="title">     
+                    KA经理
+            </h1 style="padding-right: 15px;">
+        </div>
+        <!-- 城市合伙人活动列表 -->
+        <div class="area-header page__hd header" id="city-header">
+            <img src="images/user.png" alt="用户按钮" width="20" class="pull-left uerBtn">
+            <h1 class="title">     
+                   厦门沃尔玛 
+            </h1 style="padding-right: 15px;">
         </div>
         <div class="offline-content content">
             <div class="offline-month">
@@ -44,6 +58,7 @@
                 </div>   
             </div>
         </div>
+         
     </div>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript">
