@@ -160,3 +160,10 @@
 .area-content .weui-cell__ft {
   font-size: 14px;
 }
+.choose-content {
+  padding-top: 46px;
+}
+.choose-content .weui-cells {
+  font-size: 16px;
+  margin-top: 0;
+}
