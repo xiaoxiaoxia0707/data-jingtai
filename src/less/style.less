@@ -8,6 +8,7 @@
 }
 //发布活动的查看详情
 .sendOffline-content{
+    padding-top: 46px;
     & .weui-cells{
        
         margin-top: 0;
@@ -59,11 +60,12 @@
 //个人中心
 .personal-content{
     & .main-money{
+        position:relative;
         padding-top: 46px;
         height: 185px;
         background-image: -webkit-linear-gradient(top left, #ff7e00, #ff5c00); 
     }
-    & .search-box{
+    & .search-box{       
         border-top:1px solid #ffffff;
         width: 100%;
         text-align: center;
@@ -112,4 +114,48 @@
         font-size:14px; 
         color: #999999;
     }
+}
+//KA经理的活动数据详情
+.data-content{
+     padding-top: 46px;
+     & .weui-cells{
+         margin-top: 0;
+     }
+    & .data-title{   
+        background-color: #ececec;
+    }
+    & .data-title p,.data-title .weui-cell__ft{
+        font-size:10px; 
+        color:#353535;
+        -webkit-transform: scale(1,1);
+        margin: 0;
+    }
+    & .data-title p{
+        float: left;
+    }
+    & .data-title .weui-cell__ft { 
+        float: right;
+    } 
+    & .data-title .weui-cell{
+        padding: 3.5px 15px;
+    }
+    & .information-weui-cells .weui-cell_access p:first-child{
+        font-size: 16px;
+    }
+    & .information-weui-cells .weui-cell_access p:nth-child(3),.information-weui-cells .weui-cell_access p:nth-child(2){
+        font-size: 14px;
+        color: #999999;
+    }
+    & .images-weui-cell p{
+        font-size: 16px;
+    }
+    & .images-weui-cell .weui-cell__ft{
+        font-size: 14px;
+        color: #ff8800;
+        float: right;
+        border-bottom: 1px solid #ff8800;
+    }
+    // & .information-weui-cells{
+    //     border-bottom: 1px solid #dadada;
+    // }
 }

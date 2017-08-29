@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/weui.css">
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/webuploader.css">
     <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_397517_apq9zsvphrr4quxr.css">
   <!--   <link rel="stylesheet" href="css/example.css"> -->
 </head>
@@ -56,9 +57,11 @@
                     <div class="weui-uploader">
                         <div class="weui-uploader__hd">
                             <p class="weui-uploader__title">图片上传</p>
-                            <div class="weui-uploader__info">0/3</div>
+                            <div class="weui-uploader__info  js_counter">0/3</div>
                         </div>
                         <div class="weui-uploader__bd">
+                            <ul class="weui-uploader__files" id="uploaderFiles">
+                            </ul>
                             <div class="weui-uploader__input-box">
                                 <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple/>
                             </div>
@@ -73,7 +76,53 @@
          </div>     
     </div>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/lib/webuploader.min.js"></script>
 <script type="text/javascript">
+     var imgArr = new Array();//声明全局数组
+    jQuery(function ($) {//使用jquery$
+        //图片上传初始化
+        var uploader = WebUploader.create({
+            auto: true, // 选完文件后，是否自动上传。
+            swf: 'webUploader/Uploader.swf',
+            // server: '${basepath}/front/ued/config?action=uploadimage',
+            // 选择文件的按钮,可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: '#uploaderInput',
+            // 只允许选择图片文件。
+            fileNumLimit: 3,
+            accept: {
+                title: 'Images',
+                extensions: 'gif,jpg,jpeg,bmp,png',
+                mimeTypes: 'image/*'
+            }
+        });
+        //上传成功后
+        uploader.on('uploadSuccess', function (file, response) {
+            uploader.removeFile(file);//需要移除掉文件队列缓存，避免第二次上传同样文件，无法上传的问题
+            imgArr.push(response.url);//将URL插入全局数组//数组最后面添加一个或多个元素
+            //判断是不是超过六张图片，如果是超过则把#filePicker隐藏
+                jQuery("#ploaderFiles").prepend('<li class="weui_uploader_file weui_uploader_status" style="background-image:url('+ response.url+ ')"></li>');
+                jQuery("#productImgs").val(imgArr.join(","));  //数组转字符串赋值给input
+                //在url插入上传成功的图片
+                // //绑定删除按钮事件
+                // jQuery(".del-div").click(function () {
+                //     //更新数组
+                //     var data = $(".del-img").attr("data-url");
+                //     //splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。
+                //     $.each(imgArr, function (index, item) {
+                //         if (item == data) {
+                //             imgArr.splice(index, 1);
+                //         }
+                //     });
+                //     //更新input值
+                //     jQuery("#productImgs").val(imgArr.join(","));
+                //     //移除图片显示
+                //     $(this).parent().remove();
+                // });
+            
+
+        });
+    });
 </script>
 </body>
 </html>

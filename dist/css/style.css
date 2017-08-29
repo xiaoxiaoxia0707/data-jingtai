@@ -6,6 +6,9 @@
   height: 45px;
   line-height: 45px;
 }
+.sendOffline-content {
+  padding-top: 46px;
+}
 .sendOffline-content .weui-cells {
   margin-top: 0;
 }
@@ -53,6 +56,7 @@
   border-bottom: none;
 }
 .personal-content .main-money {
+  position: relative;
   padding-top: 46px;
   height: 185px;
   background-image: -webkit-linear-gradient(top left, #ff7e00, #ff5c00);
@@ -105,4 +109,46 @@
 .personal-content .weui-cells-information p:last-child {
   font-size: 14px;
   color: #999999;
+}
+.data-content {
+  padding-top: 46px;
+}
+.data-content .weui-cells {
+  margin-top: 0;
+}
+.data-content .data-title {
+  background-color: #ececec;
+}
+.data-content .data-title p,
+.data-content .data-title .weui-cell__ft {
+  font-size: 10px;
+  color: #353535;
+  -webkit-transform: scale(1, 1);
+  margin: 0;
+}
+.data-content .data-title p {
+  float: left;
+}
+.data-content .data-title .weui-cell__ft {
+  float: right;
+}
+.data-content .data-title .weui-cell {
+  padding: 3.5px 15px;
+}
+.data-content .information-weui-cells .weui-cell_access p:first-child {
+  font-size: 16px;
+}
+.data-content .information-weui-cells .weui-cell_access p:nth-child(3),
+.data-content .information-weui-cells .weui-cell_access p:nth-child(2) {
+  font-size: 14px;
+  color: #999999;
+}
+.data-content .images-weui-cell p {
+  font-size: 16px;
+}
+.data-content .images-weui-cell .weui-cell__ft {
+  font-size: 14px;
+  color: #ff8800;
+  float: right;
+  border-bottom: 1px solid #ff8800;
 }
