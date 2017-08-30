@@ -152,6 +152,9 @@
   float: right;
   border-bottom: 1px solid #ff8800;
 }
+.data-content .weui-cell_access:last-child .weui-cell__ft:after {
+  border-color: #ff8800;
+}
 .addPicture-content {
   padding-top: 46px;
 }

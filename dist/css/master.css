@@ -211,6 +211,9 @@
 .area-content a p {
   font-size: 16px;
 }
+.area-content a p:last-child {
+  font-size: 14px;
+}
 .area-content .weui-cell__ft {
   font-size: 14px;
 }
